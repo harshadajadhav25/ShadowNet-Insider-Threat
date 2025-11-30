@@ -49,22 +49,6 @@ All work for Phase 1 is located in the `docs/` folder.
 
 ---
 
----
-
-## 📅 Phase 1 (Week 1): Planning
-
-During Phase 1, we will:
-
-1. **Define four insider threat scenarios**  
-2. **Design the complete data schema** (log fields + event types)  
-3. **Create a high-level architecture diagram**  
-4. **Set up the project folder structure**  
-5. **Prepare the repository for Phase 2 development**
-
-All work for Phase 1 is located in the `docs/` folder.
-
----
-
 ## 🚀 Next Steps
 
 - Begin **Phase 2: Synthetic Log Generation**  
