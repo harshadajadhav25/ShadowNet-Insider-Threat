@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ShadowNet Event",
+  "type": "object",
+  "description": "Base schema for a single ShadowNet log event.",
+  "required": ["timestamp", "event_type", "user_id", "status"],
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the event occurred (UTC, ISO-8601 format)"
+    },
+    "event_type": {
+      "type": "string",
+      "description": "Type of event (e.g., auth.login, iam.change, access.s3)"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "ID of the user or service principal performing the action"
+    },
+    "dept": {
+      "type": "string",
+      "description": "Department of the user (e.g., Engineering, HR)"
+    },
+    "src_ip": {
+      "type": "string",
+      "description": "Source IP address of the event"
+    },
+    "resource": {
+      "type": "string",
+      "description": "Primary resource being accessed or modified"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["success", "failure"],
+      "description": "Overall outcome of the event"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Event-specific additional fields (varies by event_type)",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
