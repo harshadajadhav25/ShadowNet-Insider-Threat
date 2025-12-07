@@ -28,31 +28,6 @@ The project covers:
 - Designing visual dashboards  
 - Writing a portfolio-grade technical report  
 
----
-
-## 🗂️ Repository Structure
-
-ShadowNet-Insider-Threat/
-├── docs/
-│ ├── architecture/ # Architecture diagram + explanation
-│ ├── schema/ # Base fields, event types, JSON schema
-│ ├── threat_scenarios/ # Phase 1: 4 insider threat scenarios
-│ └── logs/ # Phase 2: Log spec, event dictionary, workflow
-│
-├── log_generator/
-│ └── log_generator.py # Phase 2: Synthetic log generator (Python)
-│
-├── data/ # Generated JSONL logs (not committed)
-│
-├── etl_pipeline/ # Phase 3: AWS ETL design (Coming Soon)
-├── ml_detection/ # Phase 4: ML anomaly detection (Coming Soon)
-├── dashboard/ # Phase 5: Dash dashboard (Coming Soon)
-├── reports/ # Phase 6: Technical report + exports
-│
-├── requirements.txt # Python project dependencies
-└── README.md
----
-
 ## 📅 Phase 1 (Week 1): Planning
 
 During Phase 1, we will:
