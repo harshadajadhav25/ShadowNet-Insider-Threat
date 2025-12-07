@@ -45,7 +45,7 @@ Located in the `docs/` folder:
 - `docs/architecture/`
 ---
 
-# 📅 Phase 2 (Week 2): Synthetic Log Generation — ✅ Completed
+## 📅 Phase 2 (Week 2): Synthetic Log Generation — ✅ Completed
 
 During Phase 2, the following work was completed:
 
@@ -94,7 +94,7 @@ This will create:
 
 Each line is one JSON event (auth.login, failure, after-hours, etc.).
 
-## Phase 3 will include:
+Phase 3 will include:
 
     Designing S3 folder hierarchy
     Creating AWS Glue Data Catalog schemas
