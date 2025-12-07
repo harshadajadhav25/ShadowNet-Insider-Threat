@@ -45,34 +45,29 @@ Located in the `docs/` folder:
 - `docs/architecture/`
 ---
 
-## 📅 Phase 2 (Week 2): Synthetic Log Generation — ✅ Completed
+## 📅 Phase 2 (Week 2): Synthetic Log Generation
 
 During Phase 2, the following work was completed:
 
-### ✔ Designed log specifications  
+### Designed log specifications  
 - `synthetic_log_spec.md` includes format, fields, patterns, and log volume.
-
-### ✔ Built the Insider Threat Event Dictionary  
+### Built the Insider Threat Event Dictionary  
 - Maps every threat scenario to the events that represent it.
-
-### ✔ Documented the Log Automation Workflow  
+### Documented the Log Automation Workflow  
 - How logs are generated daily and stored.
-
-### ✔ Implemented the first working Python Log Generator  
+### Implemented the first working Python Log Generator  
 File: log_generator/log_generator.py
-
-
-### ✔ Generated example JSONL logs
+### Generated example JSONL logs
 Stored in the `data/` folder (not committed to GitHub).
 
-📂 **Phase 2 Docs:**  
+**Phase 2 Docs:**  
 - `docs/logs/synthetic_log_spec.md`  
 - `docs/logs/insider_threat_event_dictionary.md`  
 - `docs/logs/log_automation_workflow.md`
 
 ---
 
-# 🧪 Running the Log Generator
+# Running the Log Generator
 
 ### 1. Activate your virtual environment
 
@@ -86,7 +81,8 @@ Command Prompt:
 Mac/Linux:
     source .venv/bin/activate
 
-2. Run the generator
+### 2. Run the generator
+
     python log_generator/log_generator.py
 
 This will create:
