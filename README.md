@@ -1,6 +1,6 @@
 # 🛡️ ShadowNet — Insider Threat Detection Simulator
 
-ShadowNet is a **Data Engineering + Cybersecurity portfolio project**.  
+ShadowNet is a **Data Engineering + Cybersecurity project**.  
 It simulates real-world insider threats and models how logs move through an AWS pipeline, how anomalies are detected, and how threat activity is visualized through dashboards.
 
 This project includes:
@@ -32,7 +32,25 @@ The project covers:
 
 ## 🗂️ Repository Structure
 
-
+ShadowNet-Insider-Threat/
+├── docs/
+│ ├── architecture/ # Architecture diagram + explanation
+│ ├── schema/ # Base fields, event types, JSON schema
+│ ├── threat_scenarios/ # Phase 1: 4 insider threat scenarios
+│ └── logs/ # Phase 2: Log spec, event dictionary, workflow
+│
+├── log_generator/
+│ └── log_generator.py # Phase 2: Synthetic log generator (Python)
+│
+├── data/ # Generated JSONL logs (not committed)
+│
+├── etl_pipeline/ # Phase 3: AWS ETL design (Coming Soon)
+├── ml_detection/ # Phase 4: ML anomaly detection (Coming Soon)
+├── dashboard/ # Phase 5: Dash dashboard (Coming Soon)
+├── reports/ # Phase 6: Technical report + exports
+│
+├── requirements.txt # Python project dependencies
+└── README.md
 ---
 
 ## 📅 Phase 1 (Week 1): Planning
@@ -45,20 +63,65 @@ During Phase 1, we will:
 4. **Set up the project folder structure**  
 5. **Prepare the repository for Phase 2 development**
 
-All work for Phase 1 is located in the `docs/` folder.
+📂 **Phase 1 Docs:**  
+Located in the `docs/` folder:
+- `docs/threat_scenarios/`
+- `docs/schema/`
+- `docs/architecture/`
+---
+
+# 📅 Phase 2 (Week 2): Synthetic Log Generation — ✅ Completed
+
+During Phase 2, the following work was completed:
+
+### ✔ Designed log specifications  
+- `synthetic_log_spec.md` includes format, fields, patterns, and log volume.
+
+### ✔ Built the Insider Threat Event Dictionary  
+- Maps every threat scenario to the events that represent it.
+
+### ✔ Documented the Log Automation Workflow  
+- How logs are generated daily and stored.
+
+### ✔ Implemented the first working Python Log Generator  
+File: log_generator/log_generator.py
+
+
+### ✔ Generated example JSONL logs
+Stored in the `data/` folder (not committed to GitHub).
+
+📂 **Phase 2 Docs:**  
+- `docs/logs/synthetic_log_spec.md`  
+- `docs/logs/insider_threat_event_dictionary.md`  
+- `docs/logs/log_automation_workflow.md`
 
 ---
 
-## 🚀 Next Steps
+# 🧪 Running the Log Generator
 
-- Begin **Phase 2: Synthetic Log Generation**  
-- Implement Python-based simulated users, events, and anomalies  
-- Begin scheduling logic for daily log generation  
+### 1. Activate your virtual environment
 
----
+**PowerShell (with bypass):**
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.venv\Scripts\Activate.ps1
 
-## 🧑‍💻 Author
+Command Prompt:
+    .venv\Scripts\activate.bat
+Mac/Linux:
+    source .venv/bin/activate
 
-**Harshada Jadhav**  
-Data Engineer | Big Data Enthusiast  
-(Feel free to add your LinkedIn/GitHub links here later!)
+2. Run the generator
+    python log_generator/log_generator.py
+
+This will create:
+    data/logs_YYYY-MM-DD.jsonl
+
+Each line is one JSON event (auth.login, failure, after-hours, etc.).
+
+## Phase 3 will include:
+
+    Designing S3 folder hierarchy
+    Creating AWS Glue Data Catalog schemas
+    Planning PySpark-style transformation logic
+    Writing Athena queries for raw → processed logs
