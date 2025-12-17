@@ -93,11 +93,49 @@ Each line is one JSON event (e.g., `auth.login`, `failure`, `after-hours`, etc.)
 
 ## 📅 Phase 3 
 
-Planned next steps:
+During Phase 3, the following ETL design work was completed:
 
-- Designing S3 folder hierarchy  
-- Creating AWS Glue Data Catalog schemas  
-- Writing transformation logic (PySpark-style)  
-- Writing Athena queries for raw → processed logs  
+1. Designed the S3 Folder Hierarchy
 
----
+    Date-partitioned structure (year=YYYY/month=MM/day=DD/)
+
+    Documented in:
+    etl_pipeline/s3_folder_structure.md
+
+2. Created AWS Glue Table Schema
+
+    Defined raw logs table (raw_logs)
+
+    Specified SerDe, partition keys, and DDL
+
+    Documented in:
+    etl_pipeline/glue_table_schema.md
+
+3. Wrote ETL Transformation Logic (PySpark-style)
+
+    Flattening metadata fields
+
+    Adding derived features (after-hours flag, failed login flag, etc.)
+
+    Designing processed dataset (s3://shadownet-processed/)
+
+    Documented in:
+    etl_pipeline/transformation_logic.md
+
+4. Designed Athena Query Plan
+
+    Queries for failed logins, after-hours logins, privilege escalation, S3 misuse
+
+    Partition-aware query patterns
+
+    Documented in:
+    etl_pipeline/athena_query_plan.md
+
+Phase 4 (Upcoming): ML Anomaly Detection
+
+Next steps include:
+
+    1. Designing ML features based on transformed logs
+    2. Implementing anomaly detection (Isolation Forest / clustering / scoring)
+    3. Creating severity scoring rules
+    4. Documenting the ML design + workflow
