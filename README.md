@@ -131,7 +131,7 @@ During Phase 3, the following ETL design work was completed:
     Documented in:
     etl_pipeline/athena_query_plan.md
 
-📅 Phase 4 (Week 4): ML Anomaly Detection — Completed
+## 📅 Phase 4
 
 During Phase 4, the following detection design work was completed:
 
