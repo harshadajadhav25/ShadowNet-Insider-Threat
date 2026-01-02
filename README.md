@@ -131,11 +131,42 @@ During Phase 3, the following ETL design work was completed:
     Documented in:
     etl_pipeline/athena_query_plan.md
 
-Phase 4 (Upcoming): ML Anomaly Detection
+📅 Phase 4 (Week 4): ML Anomaly Detection — Completed
+
+During Phase 4, the following detection design work was completed:
+
+1. Defined Detection Signals
+Authentication, access, privilege, and cloud-based signals
+Documented in:
+ml_detection/detection_signals.md
+
+2. Designed Feature Engineering Plan
+User-day aggregated features for ML and scoring
+Documented in:
+ml_detection/feature_engineering.md
+
+3. Designed Anomaly Detection Models
+Rule-based detection
+Unsupervised ML (Isolation Forest, clustering)
+Hybrid detection strategy
+Documented in:
+ml_detection/anomaly_models.md
+
+4. Created Threat Scoring Matrix
+Mapped signals to risk points
+Defined severity levels (Low / Medium / High / Critical)
+Documented in:
+ml_detection/threat_scoring_matrix.md
+
+5. Documented End-to-End Detection Workflow
+From processed logs → features → detection → scoring → alerts
+Documented in:
+ml_detection/detection_workflow.md
+
+Phase 5 (Upcoming): Dashboard & Reporting
 
 Next steps include:
-
-    1. Designing ML features based on transformed logs
-    2. Implementing anomaly detection (Isolation Forest / clustering / scoring)
-    3. Creating severity scoring rules
-    4. Documenting the ML design + workflow
+Designing dashboard wireframes
+Mapping processed data to visualizations
+Building a Dash-based threat analytics dashboard
+Creating exportable reports (CSV / PDF)
